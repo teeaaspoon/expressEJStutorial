@@ -34,7 +34,7 @@ var posts = [
 // set the view engine to ejs
 app.set("view engine", "ejs");
 
-// blog homepage
+// blog home page
 app.get("/", function(req, res) {
     // render 'home.ejs' with the list of posts
     res.render("home", { posts: posts });
@@ -50,7 +50,7 @@ app.get("/post/:id", function(req, res) {
     res.render("post", {
         author: post.author,
         title: post.title,
-        bodt: post.body
+        body: post.body
     });
 });
 
